@@ -1,0 +1,446 @@
+<!doctype html>
+<!-- =========================================================
+* Louve Dashboard | Sneat-inspired Format
+==============================================================
+* Custom Dashboard Template
+* Copyright Louve (2025)
+========================================================= -->
+<!-- beautify ignore:start -->
+<html lang="en" class="layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr" data-skin="default" data-assets-path="../assets/" data-template="vertical-menu-template" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Louve Ecommerce Dashboard</title>
+    <!-- Canonical SEO -->
+    <meta name="description" content="Louve is a responsive ecommerce dashboard template inspired by Sneat. Modern, clean, and easy to customize." />
+    <meta name="keywords" content="Louve, ecommerce dashboard, bootstrap 5, admin template, responsive, modern UI" />
+    <meta property="og:title" content="Louve Ecommerce Dashboard" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <meta property="og:image" content="../assets/img/logo/logo.png" />
+    <meta property="og:description" content="Louve is a responsive ecommerce dashboard template inspired by Sneat. Modern, clean, and easy to customize." />
+    <meta property="og:site_name" content="Louve" />
+    <link rel="canonical" href="#" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/logo/site.webmanifest">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Boxicons & Font Awesome -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- ApexCharts CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.41.0/dist/apexcharts.css">
+  </head>
+<body class="bg-light" style="font-family: 'Public Sans', system-ui, sans-serif;">
+  <div class="d-flex" style="min-height: 100vh;">
+    <!-- Sidebar -->
+    <aside id="louveSidebar" class="louve-sidebar d-flex flex-column flex-shrink-0 p-3 shadow-sm" aria-label="Sidebar">
+
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none louve-sidebar-logo-row">
+            <img src="../assets/img/logo/logo.png" alt="Louve Logo" width="40" height="40" class="louve-sidebar-logo-img me-2 ms-1">
+            <span class="fs-4 fw-bold text-dark align-middle">louve</span>
+        </a>
+        <ul class="nav nav-pills flex-column mb-auto mt-3">
+            <li class="nav-item">
+                <a href="#" class="nav-link louve-sidebar-link active d-flex align-items-center gap-2" aria-current="page">
+                    <i class="bx bx-home-smile louve-sidebar-icon me-2"></i>
+                    <span class="sidebar-label">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link louve-sidebar-link d-flex align-items-center gap-2">
+                    <i class="bx bx-box louve-sidebar-icon me-2"></i>
+                    <span class="sidebar-label">Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link louve-sidebar-link d-flex align-items-center gap-2">
+                    <i class="bx bx-cart louve-sidebar-icon me-2"></i>
+                    <span class="sidebar-label">Orders</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link louve-sidebar-link d-flex align-items-center gap-2">
+                    <i class="bx bx-user louve-sidebar-icon me-2"></i>
+                    <span class="sidebar-label">Customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link louve-sidebar-link d-flex align-items-center gap-2">
+                    <i class="bx bx-cog louve-sidebar-icon me-2"></i>
+                    <span class="sidebar-label">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- Main Content Wrapper -->
+    <div class="louve-main-content flex-grow-1">
+  <!-- Louve Minimal Icon Navbar -->
+  <nav class="navbar louve-navbar bg-white shadow-sm px-4 py-2 mb-3">
+  <div class="d-flex align-items-center w-100" style="gap: 1rem;">
+    <!-- Sidebar Toggle Button -->
+    <button class="btn btn-link px-2 louve-sidebar-toggle me-2" id="sidebarToggleBtn" type="button" aria-label="Toggle sidebar" aria-controls="louveSidebar" aria-expanded="true">
+      <i class='bx bx-menu fs-3'></i>
+    </button>
+    <div class="d-flex align-items-center justify-content-end flex-grow-1" style="gap: 1rem;">
+      <i class='bx bx-globe fs-4' title="Language"></i>
+      <i class='bx bx-sun fs-4' title="Theme"></i>
+      <i class='bx bx-grid-alt fs-4' title="Apps"></i>
+      <div class="position-relative">
+        <i class='bx bx-bell fs-4' title="Notifications"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger p-1" style="font-size:0.5rem; z-index:1; border: 2px solid #fff;"></span>
+      </div>
+      <div class="dropdown position-relative">
+        <a href="#" class="d-inline-block position-relative" id="navbarAvatarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="width:36px; height:36px;">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar" class="avatar-img">
+          <span class="avatar-status"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end mt-2 p-0" aria-labelledby="navbarAvatarDropdown" style="min-width: 250px;">
+          <!-- Dropdown Header -->
+          <div class="px-3 pt-3 pb-2 border-bottom text-center">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar" class="avatar-img mb-2" style="width:48px; height:48px;">
+            <div class="fw-semibold">John Doe</div>
+            <div class="text-muted small">Admin</div>
+          </div>
+          <!-- Menu Items -->
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#"><i class="bx bx-user fs-5"></i> My Profile</a>
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#"><i class="bx bx-cog fs-5"></i> Settings</a>
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2 justify-content-between" href="#">
+            <span><i class="bx bx-credit-card fs-5"></i> Billing Plan</span>
+            <span class="badge bg-danger rounded-pill ms-2">4</span>
+          </a>
+          <div class="dropdown-divider my-1"></div>
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#"><i class="bx bx-dollar fs-5"></i> Pricing</a>
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#"><i class="bx bx-help-circle fs-5"></i> FAQ</a>
+          <div class="dropdown-divider my-1"></div>
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger mb-1" href="#"><i class="bx bx-power-off fs-5"></i> Log Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+      <div class="container-fluid px-4 mt-3">
+        <main>
+          <!-- Analytics Summary Row -->
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100 bg-primary text-white">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="bg-white bg-opacity-25 text-white rounded p-3 me-3"><i class="bx bx-bar-chart-alt-2 fs-2"></i></span>
+                    <div>
+                      <div class="fs-5 fw-bold">$48,900</div>
+                      <div class="fw-semibold">Total Revenue</div>
+                      <div class="small">+12.5% this month</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100 bg-success text-white">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="bg-white bg-opacity-25 text-white rounded p-3 me-3"><i class="bx bx-cart fs-2"></i></span>
+                    <div>
+                      <div class="fs-5 fw-bold">1,245</div>
+                      <div class="fw-semibold">Orders</div>
+                      <div class="small">+8.2% this month</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100 bg-info text-white">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="bg-white bg-opacity-25 text-white rounded p-3 me-3"><i class="bx bx-user fs-2"></i></span>
+                    <div>
+                      <div class="fs-5 fw-bold">4,679</div>
+                      <div class="fw-semibold">Customers</div>
+                      <div class="small">+2.4% this month</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100 bg-warning text-white">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="bg-white bg-opacity-25 text-white rounded p-3 me-3"><i class="bx bx-basket fs-2"></i></span>
+                    <div>
+                      <div class="fs-5 fw-bold">3.2%</div>
+                      <div class="fw-semibold">Conversion Rate</div>
+                      <div class="small">-0.8% this month</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Row -->
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-lg-8">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-header border-0 pb-0">
+                  <h6 class="mb-0 ">Sales Overview</h6>
+                </div>
+                <div class="card-body">
+                  <div id="sales-overview-chart" style="min-height: 320px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-header border-0 pb-0">
+                  <h6 class="mb-0">Orders Breakdown</h6>
+                </div>
+                <div class="card-body">
+                  <div id="orders-breakdown-chart" style="min-height: 320px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Row: Top Products, Recent Orders, Best Customers, Inventory -->
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                  <div class="fw-semibold mb-2"><i class="bx bx-star text-warning me-2"></i>Top Products</div>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Wireless Headphones</span><span class="badge bg-primary">324 sold</span></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Smart Watch</span><span class="badge bg-success">217 sold</span></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Bluetooth Speaker</span><span class="badge bg-info">189 sold</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                  <div class="fw-semibold mb-2"><i class="bx bx-receipt text-info me-2"></i>Recent Orders</div>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Order #1024</span><span class="badge bg-success">$249</span></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Order #1023</span><span class="badge bg-warning">$139</span></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Order #1022</span><span class="badge bg-danger">$79</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                  <div class="fw-semibold mb-2"><i class="bx bx-user-check text-success me-2"></i>Best Customers</div>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Katie S.</span><span class="badge bg-primary">$2,480</span></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>John D.</span><span class="badge bg-info">$1,920</span></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Sarah W.</span><span class="badge bg-success">$1,650</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                  <div class="fw-semibold mb-2"><i class="bx bx-package text-primary me-2"></i>Inventory Status</div>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>In Stock</span><span class="badge bg-success">1,245</span></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Low Stock</span><span class="badge bg-warning">32</span></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center"><span>Out of Stock</span><span class="badge bg-danger">7</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+
+          <!-- Stats Cards Row -->
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="bg-primary text-white rounded p-2 me-2"><i class="bx bx-dollar fs-4"></i></span>
+                    <div>
+                      <div class="fw-semibold text-muted">Sales</div>
+                      <div class="fs-5 fw-bold">$4,679</div>
+                      <div class="text-success small">+28.42%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="bg-success text-white rounded p-2 me-2"><i class="bx bx-bar-chart-alt-2 fs-4"></i></span>
+                    <div>
+                      <div class="fw-semibold text-muted">Profit</div>
+                      <div class="fs-5 fw-bold">624k</div>
+                      <div class="text-success small">+12.10%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="bg-warning text-white rounded p-2 me-2"><i class="bx bx-pie-chart fs-4"></i></span>
+                    <div>
+                      <div class="fw-semibold text-muted">Expenses</div>
+                      <div class="fs-5 fw-bold">78%</div>
+                      <div class="text-danger small">$21k more than last month</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="bg-info text-white rounded p-2 me-2"><i class="bx bx-transfer fs-4"></i></span>
+                    <div>
+                      <div class="fw-semibold text-muted">Transactions</div>
+                      <div class="fs-5 fw-bold">$14,857</div>
+                      <div class="text-success small">+28.14%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Charts Row -->
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-lg-8">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-header border-0 pb-0">
+                  <h6 class="mb-0">Total Income</h6>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <div>
+                        <div class="fs-2 fw-bold">$124,500</div>
+                        <div class="text-muted small">Total Income (May 2025)</div>
+                        </div>
+                        <span class="badge bg-success fs-6">+8.4%</span>
+                    </div>
+                    <div class="mb-2">
+                        <div id="total-income-chart"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-header border-0 pb-0">
+                  <h6 class="mb-0">Report</h6>
+                  <span class="small text-muted">Monthly Avg. $45,578k</span>
+                </div>
+                <div class="card-body">
+                  <div class="mb-2">
+                    <div class="row g-2 align-items-center py-2 border-bottom">
+                      <div class="col-auto">
+                        <span class="bg-primary text-white rounded p-2 d-flex align-items-center justify-content-center"><i class="bx bx-money fs-5"></i></span>
+                      </div>
+                      <div class="col flex-grow-1">
+                        <div class="fw-semibold text-muted">Income</div>
+                        <div class="fw-bold fs-6">$42,845 <span class="text-success small ms-1">+2.34k</span></div>
+                      </div>
+                      <div class="col flex-grow-1 text-end">
+                        <div class="fw-semibold text-muted">Prev.</div>
+                        <div class="fw-bold fs-6">$41,200</div>
+                      </div>
+                    </div>
+                    <div class="row g-2 align-items-center py-2 border-bottom">
+                      <div class="col-auto">
+                        <span class="bg-warning text-white rounded p-2 d-flex align-items-center justify-content-center"><i class="bx bx-credit-card fs-5"></i></span>
+                      </div>
+                      <div class="col flex-grow-1">
+                        <div class="fw-semibold text-muted">Expense</div>
+                        <div class="fw-bold fs-6">$38,658 <span class="text-danger small ms-1">-1.15k</span></div>
+                      </div>
+                      <div class="col flex-grow-1 text-end">
+                        <div class="fw-semibold text-muted">Prev.</div>
+                        <div class="fw-bold fs-6">$39,100</div>
+                      </div>
+                    </div>
+                    <div class="row g-2 align-items-center py-2 border-bottom">
+                      <div class="col-auto">
+                        <span class="bg-info text-white rounded p-2 d-flex align-items-center justify-content-center"><i class="bx bx-bar-chart fs-5"></i></span>
+                      </div>
+                      <div class="col flex-grow-1">
+                        <div class="fw-semibold text-muted">Profit</div>
+                        <div class="fw-bold fs-6">$18,220 <span class="text-success small ms-1">+1.35k</span></div>
+                      </div>
+                      <div class="col flex-grow-1 text-end">
+                        <div class="fw-semibold text-muted">Target</div>
+                        <div class="fw-bold fs-6">$20,000</div>
+                      </div>
+                    </div>
+                    <div class="row g-2 align-items-center py-2 border-bottom">
+                      <div class="col-auto">
+                        <span class="bg-danger text-white rounded p-2 d-flex align-items-center justify-content-center"><i class="bx bx-undo fs-5"></i></span>
+                      </div>
+                      <div class="col flex-grow-1">
+                        <div class="fw-semibold text-muted">Refunds</div>
+                        <div class="fw-bold fs-6">$1,120 <span class="badge bg-danger ms-1">-0.3%</span></div>
+                      </div>
+                      <div class="col flex-grow-1 text-end">
+                        <div class="fw-semibold text-muted">Prev.</div>
+                        <div class="fw-bold fs-6">$1,250</div>
+                      </div>
+                    </div>
+                    <div class="row g-2 align-items-center py-2">
+                      <div class="col-auto">
+                        <span class="bg-success text-white rounded p-2 d-flex align-items-center justify-content-center"><i class="bx bx-pie-chart-alt fs-5"></i></span>
+                      </div>
+                      <div class="col flex-grow-1">
+                        <div class="fw-semibold text-muted">Net Margin</div>
+                        <div class="fw-bold fs-6">22.8% <span class="badge bg-success ms-1">+1.1%</span></div>
+                      </div>
+                      <div class="col flex-grow-1 text-end">
+                        <div class="fw-semibold text-muted">Target</div>
+                        <div class="fw-bold fs-6">25.0%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- ApexCharts CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <!-- Main JS (Chart Init) -->
+        <script src="../assets/js/main.js"></script>
+      </div>
+      <!-- Footer remains full width -->
+      <footer class="shadow-sm py-3 px-4 text-center text-muted small mt-auto" style="background: transparent; border-top: 1px solid var(--divider);">
+        &copy; 2025 Louve. All rights reserved.
+      </footer>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
